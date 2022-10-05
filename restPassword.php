@@ -16,13 +16,9 @@
     <!-- Boxiocns CND link -->
     <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
     <style type="style/css">
-
     </style>
 </head>
-
 <body style="background-color: #DE3163;">
-
-
     <div class="container bg-grey ">
         <div id="root">
             <div class="Toastify"></div>
@@ -34,13 +30,11 @@
                                 <div draggable="false" class="anti-image">
                                     <img src="images/APlogosBig3.png" alt="" class="ant-image text-center" style="max-width: 200px">
                                 </div>
-
                             </div>
                             <div class="align-center mt-1 font600 text-uppercase text-md mb-4 mt-3">
                                 <p class="FS-4 text-center text-white">Posta Uganda System</p>
-
                             </div>
-                            <div role="alert" class="fade text-md text-uppercase text-center p-3 font500 rounded shadow-sm alert-danger show">
+                            <div role="alert" class="fade text-md text-uppercase text-center p-3 font500 rounded shadow-sm alert-info show">
                                 To reset your default or for gotten password,Enter your <strong> USERNAME</strong> and a password reset will be sent to your email.
                             </div>
                             <div class="bg-white rounded shadow-sm card">
@@ -56,11 +50,9 @@
                                                 <input type="text" name="username" autocomplete="off" id="username" class="form-control-sm text-sm font500 w-100 rounded-0 null from-control" value>
                                             </div>
                                         </div>
-
                                         <button style="align-content :center" type="submit" class="text-uppercase text-white text-sm w100 fw-normal btn btn-danger btn3-sm">
                                             REQUEST TOKEN
                                         </button>
-
                                     </form>
                                 </div>
                             </div>
@@ -77,9 +69,6 @@
                 </div>
             </div>
         </div>
-
-
     </div>
 </body>
-
 </html>

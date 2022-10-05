@@ -1,4 +1,12 @@
 
+<?php
+session_start();
+
+if (isset($_SESSION['USERNAME'])){
+
+include "adminNav.php";
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -34,7 +42,7 @@ a {
                 <a href="admin.php"><span style="font-size:30px;cursor:pointer" >&#9776; Menu</span></a>
                 <ul style="list-style-type: none;padding: 0px;" class="nav-bar">
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle " href="#" role="button" data-bs-toggle="dropdown"><span class="text-white mx-2">Ahimbisibwe Job</span><img src="../images/img_avatar1.png" alt="profile image" style="width: 40px;" class="rounded-pill "></a><span class="glyphicon glyphicon-align-justify"></span>
+                        <a class="nav-link dropdown-toggle " href="#" role="button" data-bs-toggle="dropdown"><span class="text-white mx-2"><?php echo $_SESSION['USERNAME']?></span><img src="../images/img_avatar1.png" alt="profile image" style="width: 40px;" class="rounded-pill "></a><span class="glyphicon glyphicon-align-justify"></span>
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item glyphicon glyphicon-das " href="admin.php"><i class='bx bxs-dashboard'></i>Darshboard</a>
 
@@ -111,7 +119,7 @@ a {
                        alt="User profile picture">
                 </div>
 
-                <h3 class="profile-username text-center">Job  Ahimbisibwe</h3>
+                <h3 class="profile-username text-center"><?php echo $_SESSION['USERNAME']?></h3>
 
                 <p class="text-muted text-center"></p>
 
@@ -271,5 +279,11 @@ a {
 </body>
 
 </html>
+
+<?php 
+} else {
+    header("location:../index.php");
+}
+?>
 
 

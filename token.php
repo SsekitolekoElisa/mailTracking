@@ -16,13 +16,9 @@
     <!-- Boxiocns CND link -->
     <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
     <style type="style/css">
-
     </style>
 </head>
-
 <body style="background-color: #DE3163;">
-
-
     <div class="container bg-grey ">
         <div id="root">
             <div class="Toastify"></div>
@@ -34,13 +30,11 @@
                                 <div draggable="false" class="anti-image">
                                     <img src="images/APlogosBig3.png" alt="" class="ant-image text-center" style="max-width: 200px">
                                 </div>
-
                             </div>
                             <div class="align-center mt-1 font600 text-uppercase text-md mb-4 mt-3">
                                 <p class="FS-4 text-center text-white">Posta Uganda System</p>
-
                             </div>
-                            <div role="alert" class="fade text-md text-uppercase text-center p-3 font500 rounded shadow-sm alert-danger show">
+                            <div role="alert" class=" text-md text-uppercase text-center p-3 font500 rounded shadow-sm alert-info show">
                                 To reset your default or for gotten password,Enter your <strong> USERNAME</strong> and a password reset will be sent to your email.
                             </div>
                             <div class="bg-white rounded shadow-sm card">
@@ -62,7 +56,7 @@
                                                 <strong class="text-danger ms-1">*</strong>
                                             </label>
                                             <div>
-                                                <input type="text" name="username" autocomplete="off" id="username" class="form-control-sm text-sm font500 w-100 rounded-0 null from-control" value>
+                                                <input type="text" name="token" autocomplete="off" id="to" class="form-control-sm text-sm font500 w-100 rounded-0 null from-control" value>
                                             </div>
                                         </div>
                                         
@@ -79,33 +73,63 @@
                                                 <span class="text-black">Confirm New Password</span>
                                             </label>
                                             <div>
-                                            <input type="password" name="password" autocomplete="off" id="password" class=" from-contral form-control-sm text-sm font500 w-100 rounded-0 null from-control" value>
+                                            <input type="password" name="cpassword" autocomplete="off" id="cpassword" class=" from-contral form-control-sm text-sm font500 w-100 rounded-0 null from-control" value>
                                             </div>
                                         </div>
-
                                         <button style="align-content :center" type="submit" class="text-uppercase text-white text-sm w100 fw-normal btn btn-danger btn3-sm">
                                             Rest Password
                                         </button>
-
                                     </form>
                                 </div>
                             </div>
                             <div class="mt-3 mb-0 text-center text-sm font600">
                                 <span class="text-dark"> Have an account?</span>
-                                <button type="button" class="text-sm fw-bold btn btn-link">  <a href="logIn.php" class="text-white">Sign in here</a> </button>
+                                <button type="button" class="text-sm fw-bold btn btn-link">  <a href="index.php" class="text-white">Sign in here</a> </button>
                             </div>
                             <div class="mt-3 mb-0 text-center text-sm font600">
                                 <span class="text-dark"> Have an Adimn Token?</span>
-                                <button type="button" class="text-sm fw-bold btn btn-link">  <a href="restPassword.php" class="text-white"> change password</a> </button>
+                                <button type="button" class="text-sm fw-bold btn btn-link">  <a href="restpassword.php" class="text-white"> change password</a> </button>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-
-
     </div>
 </body>
-
 </html>
+<?php
+include 'mail_DB_connect.php';
+if(isset($_POST['submit']))
+{
+    $username = $_POST['username'];
+    $token = $_POST['token'];
+    $password = $_POST['password'];
+    $cpassword = $_POST['cpassword'];
+
+    if ($password == $cpassword = $_POST['cpassword']) {
+        $retrieve_query =  "select * from staff where username='$username' and token='$token'";
+        $execute_query = mysqli_query($con, $retrieve_query);
+        $fetch = mysqli_fetch_assoc($execute_query);
+        $row = mysqli_num_rows($execute_query );
+       // echo($row);
+     if($row>0){
+             
+        $insert_query = "update staff set password =' $password ' where username='$username' ";
+        $execute_query = mysqli_query($con, $insert_query);
+       header("location:index.php");
+          } else{
+       
+        header("location:token.php");
+       }
+    
+    }
+   
+}
+
+   
+
+
+
+
+?>

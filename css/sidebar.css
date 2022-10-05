@@ -3,9 +3,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600;700&display=swap');
 
 *{
-  font-family: 'Poppins', sans-serif;
- 
- 
+    font-family: 'Poppins', sans-serif;
+
+
 }
 
 
@@ -18,96 +18,98 @@
     position: fixed;
     height: 100%;
     overflow: auto;
-  }
-  
-  /* Sidebar links */
-  .sidebar a {
+}
+
+/* Sidebar links */
+.sidebar a {
     display: block;
     color: rgb(255, 249, 249);
     padding: 16px;
     text-decoration: none;
-  }
-  
-  /* Sidebar links dropdown */
-  #drop {
+}
+
+/* Sidebar links dropdown */
+#drop {
     display: block;
     color: rgb(13, 13, 13);
     padding: 16px;
     text-decoration: none;
-  }
-  /* Active/current link */
-  .sidebar a.active {
+}
+/* Active/current link */
+.sidebar a.active {
     background-color: #4689d6;
-    color: white; 
-  }
-  
-  /* Links on mouse-over */
-  /* .sidebar a:hover:not(.active) {
-    background-color: rgb(85, 7, 7);
     color: white;
-  } */
-  .sidebar a:hover {
+}
+
+/* Links on mouse-over */
+/* .sidebar a:hover:not(.active) {
+  background-color: rgb(85, 7, 7);
+  color: white;
+} */
+.sidebar a:hover {
     background-color:#f0b2b2;
-    color: white;
-  }
-  /* Page content. The value of the margin-left property should match the value of the sidebar's width property */
-  div.content {
+    color:#fff;
+}
+/* Page content. The value of the margin-left property should match the value of the sidebar's width property */
+div.content {
     margin-left: auto;
     padding: 1px 16px;
     height: 1111px;
-  }
-  
-  /* On screens that are less than 700px wide, make the sidebar into a topbar */
-  @media screen and (max-width: 700px) {
+}
+
+/* On screens that are less than 700px wide, make the sidebar into a topbar */
+@media screen and (max-width: 700px) {
     .sidebar {
-      width: 100%;
-      height: auto;
-      position: relative;
+        width: 100%;
+        height: auto;
+        position: relative;
     }
     .sidebar a {float: left;}
     div.content {margin-left: 0;}
-  }
-  
-  /* On screens that are less than 400px, display the bar vertically, instead of horizontally */
-  @media screen and (max-width: 400px) {
-    .sidebar a {
-      text-align: center;
-      float: none;
-    }
-  }
+}
 
-  .sidenav {
-  height: 100%;
-  width: 0;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  right: 0;
-  background-color: rgb(216, 199, 199);
-  overflow-x: hidden;
-  transition: 0.5s;
-  padding-top: 50px;
+/* On screens that are less than 400px, display the bar vertically, instead of horizontally */
+@media screen and (max-width: 400px) {
+    .sidebar a {
+        text-align: center;
+        float: none;
+    }
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: rgb(216, 199, 199);
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 50px;
 }
 
 .sidenav a {
-  padding: 8px 8px 8px 32px;
-  text-decoration: none;
-  font-size: 25px;
-  color: #818181;
-  display: block;
-  transition: 0.3s;
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
 }
 
 .sidenav a:hover {
-  color: #f1f1f1;
+    color: #f1f1f1;
 }
 
-.sidenav .closebtn {
-  position: absolute;
-  top: 0;
-  right: 25px;
-  font-size: 36px;
-  margin-left: 50px;
+.sidenav .btn-close {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+    padding-right: 40px;
+     color: #fff;
 }
 
 

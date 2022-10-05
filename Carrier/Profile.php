@@ -1,4 +1,11 @@
+<?php
+session_start();
 
+if (isset($_SESSION['USERNAME'])){
+
+include "carrierNav.php";
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -111,7 +118,7 @@ a {
                        alt="User profile picture">
                 </div>
 
-                <h3 class="profile-username text-center">Job  Ahimbisibwe</h3>
+                <h3 class="profile-username text-center"><?php echo $_SESSION['USERNAME']?></h3>
 
                 <p class="text-muted text-center"></p>
 
@@ -137,13 +144,13 @@ a {
                             <label for="inputName" class="col-sm-4 control-label">First Name:</label>
 
                             <div class="col-sm-8" style="max-width:100%">
-                            <input type="text" class="form-control" name="name" value="Job  Ahimbisibwe" required>
+                            <input type="text" class="form-control" name="name" value="<?php echo $fetch["fname"];  ?>" required>
                             </div>
                             <div class="col-lg-6">
                             <label for="inputName" class="col-sm-4 control-label">Last Name:</label>
 
                             <div class="col-sm-8" style="max-width:100%">
-                            <input type="text" class="form-control" name="name" value="Job  Ahimbisibwe" required>
+                            <input type="text" class="form-control" name="name" value="<?php echo $fetch["lname"];  ?>" required>
                             </div>
 
                             </div>
@@ -151,39 +158,23 @@ a {
                             <label for="inputEmail" class="col-sm-4 control-label">Email:</label>
 
                             <div class="col-sm-8" style="max-width:100%">
-                            <input type="text" class="form-control" name="email" value="ahimbisibwejoblee@gmail.com" required>
+                            <input type="text" class="form-control" name="email" value="<?php echo $fetch["email"];  ?>" required>
                             </div>
 
-                            </div>
-                        </div>
-                        
-                      </div>
-
-                      <div class="form-group">
-                      <div class="row">
                             <div class="col-lg-6">
                             <label for="inputName2" class="col-sm-4 control-label">Phone:</label>
 
                             <div class="col-sm-8" style="max-width:100%">
-                            <input type="text" class="form-control" name="phone" value="0786514543" required>
+                            <input type="text" class="form-control" name="phone" value="<?php echo $fetch["telNumber"];  ?>" required>
                             </div>
 
-                            </div>
-                            <div class="col-lg-6">
-                            <label for="inputExperience" class="col-sm-4 control-label">Address:</label>
 
-                            <div class="col-sm-8" style="max-width:100%">
-                            <input type="text" class="form-control" name="address" value="" required>
-                            </div>
-                            
                             </div>
                         </div>
                         
                       </div>
 
-                        
-                      </div>
-
+                    
                       
             </div>
             <!-- /.nav-tabs-custom -->
@@ -271,5 +262,33 @@ a {
 </body>
 
 </html>
+
+<?php 
+} else {
+    header("location:../index.php");
+}
+?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 

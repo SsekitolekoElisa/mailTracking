@@ -22,7 +22,6 @@ $fetch = mysqli_fetch_assoc($execute_query);
     <!-- Page content -->
     <div id="main" style=" padding: 90px 20px  0px 60px; ">
         <!-- Page content -->
-        <div class=" container ">
             <div class="col-sm-12">
                 <div class="card-header">
                     <h4>Dashboard</h4>
@@ -31,10 +30,10 @@ $fetch = mysqli_fetch_assoc($execute_query);
 
 
             </div>
-        </div>
+        
         <table align="center" class="table table-striped table-hover">
             <thead bgcolor="#1367EA" class="text-white">
-                <h2 align="center">Mails to be Delivered</h2>
+              
                 <tr>
 
                     <td>mail_id </td>
@@ -66,7 +65,7 @@ $fetch = mysqli_fetch_assoc($execute_query);
             </tbody>
 
         </table>
-
+</div>
 </html>
 <?php 
 } else {

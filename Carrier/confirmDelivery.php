@@ -43,7 +43,7 @@ $fetch = mysqli_fetch_assoc($execute_query);
                     <td >Client Id</td>
                     <td >lname</td>
                     <td >first name</td>
-                    <td  >Phone number</td>>
+                    <td  >Phone number</td>
                     <td >Added Time</td>
                     <td >Confirmation</td>
                 </tr>

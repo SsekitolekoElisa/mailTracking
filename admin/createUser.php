@@ -58,7 +58,7 @@ if( !isset($_GET['edit']))
                         <td>
                     <tr>
                         <td>First name :</td>
-                        <td><input type="text" name="fname" id="name1" value="<?php echo $fetch['fname']; ?>"></td>
+                        <td><input type="text" name="fname" id="name1" required value="<?php echo $fetch['fname']; ?>"></td>
                     </tr>
 
                     <tr>
@@ -84,8 +84,13 @@ if( !isset($_GET['edit']))
                     </tr>
                     <tr>
                         <td>Role:</td>
-                        <td><input type="radio" name="role" value="Admin" value="<?php echo $fetch['role']; ?>">Adminstrater <br>
-                            <input type="radio" name="role" value="Carrier" value="<?php echo $fetch['role']; ?>">Carrier
+                     <td>
+                        <select name="branchNo" id="code" required value="<?php echo $fetch['branchNo']; ?>">
+                                    <option>--Select Role</option>
+                                    <option name="branchNo" value="Admin" value="<?php echo $fetch['role']; ?>">Adminstrater </option>
+                                    <option name="branchNo"  value="Carrier" value="<?php echo $fetch['role']; ?>">Carrier</option>
+                                    
+                                </select>
                         </td>
                         <!-- <td><input type="text" name="role" id="ROLE" default></td> -->
                     </tr>

@@ -60,7 +60,7 @@ if (isset($_GET['edit'])) {
 
     <table width="75%" align="center" class="table table-striped">
         <tbody>
-            <h2 align="center">Staff Records</h2>
+           
             <tr bgcolor="#1367EA" class="tr">
                 <!-- <td>Staff No.</td> -->
                 <td class="text-white">User name </td>
@@ -95,7 +95,8 @@ if (isset($_GET['edit'])) {
                     <!-- <td><?php //echo $fetch['branchNo']; 
                                 ?></td> -->
                     <td> <a href="../admin/createUser.php?edit=<?php echo $fetch['email']; ?>" $$ message=Update><button type="submit" class=" btn_edit text-uppercase text-white text-sm w100 fw-normal btn btn-info btn3-sm" name="edit">Edit</button> </a> </td>
-                    <td> <a href="../time.php?delete=<?php echo $fetch['email']; ?>"> <button type="submit" class=" btn_delete text-uppercase text-white text-sm w100 fw-normal btn btn-danger btn3-sm" name="delete">delete</button> </a> </td>
+                    <td> <a href="../delete.php?delete=<?php echo $fetch['email']; ?>"> 
+                    <button type="submit" class=" btn_delete text-uppercase text-white text-sm w100 fw-normal btn btn-danger btn3-sm" name="delete">delete</button> </a> </td>
                 </tr>
             <?php } ?>
 

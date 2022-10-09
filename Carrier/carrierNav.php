@@ -80,13 +80,9 @@
        <!-- The sidebar -->
        <div class="sidebar" id="mySidenav" class="sidenav">
         <!-- <a class="active" href="#home">Home</a> -->
-        <button class=" btn-close " style="padding-right: 40px;" onclick="closeNav();"></button><span style="font-size: 20px;">close menu</span>
-        <a href="courier.php" class="active"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" style="fill: rgba(225, 225, 225, 225);transform: msFilter; margin:4px">
-                <path d="M4 13h6a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1zm-1 7a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-4a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v4zm10 0a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-7a1 1 0 0 0-1-1h-6a1 1 0 0 0-1 1v7zm1-10h6a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1h-6a1 1 0 0 0-1 1v5a1 1 0 0 0 1 1z"></path>
-            </svg>
-            </i>Darshboard
-
-        </a>
+        <button class=" btn-close  btn-grey"  style=" float:right ;" onclick="closeNav();"></button><span style="font-size: 20px;">close menu</span>
+        <a href="courier.php" class="active"> <span style="min-width:30px ;"></span><i class='bx bxs-dashboard'>
+            </i> <span style=" margin:4px"> Darshboard</a></span>
         <a href="mailsToDeliver.php"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" style="fill: #FFFFFF ;transform: msFilter; margin:4px">
                 <path d="M20 4H6c-1.103 0-2 .897-2 2v5h2V8l6.4 4.8a1.001 1.001 0 0 0 1.2 0L20 8v9h-8v2h8c1.103 0 2-.897 2-2V6c0-1.103-.897-2-2-2zm-7 6.75L6.666 6h12.668L13 10.75z"></path>
                 <path d="M2 12h7v2H2zm2 3h6v2H4zm3 3h4v2H7z"></path>
@@ -126,6 +122,29 @@
 
     </footer>
 </body>
+<script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-analytics.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyBPSTjYYVBk76ffyZEQmifLVPPPOIv20IY",
+    authDomain: "mail-system-fcd86.firebaseapp.com",
+    projectId: "mail-system-fcd86",
+    storageBucket: "mail-system-fcd86.appspot.com",
+    messagingSenderId: "921406321829",
+    appId: "1:921406321829:web:7644b56134e737ba62094c",
+    measurementId: "G-E1M8N2TSKS"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+</script>
 
 </html>
 <?php 

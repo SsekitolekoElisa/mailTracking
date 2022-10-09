@@ -10,7 +10,7 @@ include "adminNav.php";
 ?>
 <html lang="en">
     <title>add new mails</title>
-    <div class="  align-content-center container-fluid  " id="mycontent" style="float: right; margin: 30px; padding: 70px; width: 1250px; ;">
+    <div id="main" style=" padding: 90px 20px  0px 60px; " > 
         <!-- Page content -->
         <div class="col-sm-12">
             <div class="card-header">

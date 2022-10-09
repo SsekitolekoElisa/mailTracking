@@ -47,9 +47,15 @@ $num4 = mysqli_num_rows($execute_query4);
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(1, 1, 1, 1);">
             <path d="M21 20V6c0-1.103-.897-2-2-2h-2V2h-2v2H9V2H7v2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2zM9 18H7v-2h2v2zm0-4H7v-2h2v2zm4 4h-2v-2h2v2zm0-4h-2v-2h2v2zm4 4h-2v-2h2v2zm0-4h-2v-2h2v2zm2-5H5V7h14v2z"></path></svg>
             <label>Date:<?php  echo date(" d-m-Y"); ?> </label>
-        </div>
+</div>
         
-        <div class="insights card-header">
+        <?php echo  $_msg = '<div class="alert alert-success alert-dismissible">
+        <button type="button" class="btn-close" data-bs-dismiss="alert"></button><strong>Success <?php echo $_SESSION["USERNAME"];  ?>!</strong> You have successfully Loged In.
+  </div>';
+   ?> 
+      
+       
+      <div class="insights card-header">
             <div class="new">
                 <span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(250, 245, 245, 1);">
                     <path d="M20 5h-9.586L8.707 3.293A.997.997 0 0 0 8 3H4c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h16c1.103 0 2-.897 2-2V7c0-1.103-.897-2-2-2zm-4 9h-3v3h-2v-3H8v-2h3V9h2v3h3v2z"></path></svg></span>
@@ -155,6 +161,8 @@ $num4 = mysqli_num_rows($execute_query4);
                 </div>
                 <small>Last 24 hours</small>
             </div>
+
+    
 
         </div>
 

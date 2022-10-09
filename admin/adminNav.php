@@ -17,7 +17,7 @@
     <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
      <!-- sweet alert CND link -->
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-    
+
 
     <script>
     
@@ -80,7 +80,7 @@
     <!-- The sidebar -->
     <div class="sidebar" id="mySidenav" class="sidenav">
         <!-- <a class="active" href="#home">Home</a> -->
-        <button class=" btn-close "  onclick="closeNav();"></button><span style="font-size: 20px;">close menu</span>
+        <button class=" btn-close  btn-grey"  style=" float:right ;" onclick="closeNav();"></button><span style="font-size: 20px;">close menu</span>
         <a href="admin.php" class="active"> <span style="min-width:30px ;"></span><i class='bx bxs-dashboard'>
             </i> <span style=" margin:4px"> Darshboard</a></span>
         <a href="createUser.php">
@@ -152,5 +152,28 @@
 
     </footer>
 </body>
+<script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-analytics.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyBPSTjYYVBk76ffyZEQmifLVPPPOIv20IY",
+    authDomain: "mail-system-fcd86.firebaseapp.com",
+    projectId: "mail-system-fcd86",
+    storageBucket: "mail-system-fcd86.appspot.com",
+    messagingSenderId: "921406321829",
+    appId: "1:921406321829:web:7644b56134e737ba62094c",
+    measurementId: "G-E1M8N2TSKS"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+</script>
 
 </html>

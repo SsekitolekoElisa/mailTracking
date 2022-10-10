@@ -29,7 +29,6 @@ $num3 = mysqli_num_rows($execute_query3);
 $num4 = mysqli_num_rows($execute_query4);
 
 ?>
-?>
 
 
 <html lang="en">
